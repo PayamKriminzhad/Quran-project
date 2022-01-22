@@ -1,16 +1,9 @@
-﻿# from typing_extensions import Self
-from django.db.models.query import QuerySet
+﻿from django.db.models.query import QuerySet
 import django_filters
-from .models import Aye
+from .models import Aya
 
-class AyeFilter(django_filters.FilterSet):
-    name = django_filters.CharFilter(lookup_expr='aye')
-
-    # ordering = django_filters.ChoiceFilter(label="Ordering", choices = 'CHOICES', method = 'filter_by_order')
+class AyaFilter(django_filters.FilterSet):
+    
     class Meta:
-        model = Aye
-        fields = ['joz', 'aye','soure']
-
-
-
-    # class filter_by_order(Self, QuerySet, name):
+        model = Aya
+        fields = ['joz', 'sura', 'ayaNumber']

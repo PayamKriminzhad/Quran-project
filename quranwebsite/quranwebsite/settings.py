@@ -32,6 +32,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'admin_interface',
+    'colorfield',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -41,6 +43,9 @@ INSTALLED_APPS = [
     'quran',
     'django_filters',
 ]
+
+X_FRAME_OPTIONS='SAMEORIGIN' # only if django version >= 3.0
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -106,7 +111,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'fa-ir'
 
 TIME_ZONE = 'UTC'
 
@@ -134,3 +139,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'static_cdn','media_root')
 STATICFILS_DIRS=[
     os.path.join(BASE_DIR, 'staticfiles')
 ]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')

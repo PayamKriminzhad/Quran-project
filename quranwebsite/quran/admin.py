@@ -1,34 +1,31 @@
 from django.contrib import admin
-from .models import Header, About, Contact, Footer, Contact_us, Aye, Hadis
+from .models import Settings_main, Messages_contact, Aya, Hadis, Contact_footer
 
-# Register your models here.
+
+
 # Admin classes
-class HeaderAdmin(admin.ModelAdmin):
-    list_display = ['title']
+class Settings_mainAdmin(admin.ModelAdmin):
+    list_display = ['header_title']
 
-class AyeAdmin(admin.ModelAdmin):
-    list_display = ['title']
+class AyaAdmin(admin.ModelAdmin):
+    list_display = ['text']
 
 class HadisAdmin(admin.ModelAdmin):
-    list_display = ['title']
+    list_display = ['imam']
 
-class AboutAdmin(admin.ModelAdmin):
-    list_display = ['title']
 
-class ContactAdmin(admin.ModelAdmin):
-    list_display = ['title']
 
-class FooterAdmin(admin.ModelAdmin):
-    list_display = ['logo']
-
-class Contact_usAdmin(admin.ModelAdmin):
+class Messages_contactAdmin(admin.ModelAdmin):
     list_display = ['name']
 
-admin.site.register(Header, HeaderAdmin)
-admin.site.register(Aye, AyeAdmin)
+
+class Contact_footerAdmin(admin.ModelAdmin):
+    list_display = ['name']
+
+
+admin.site.register(Settings_main, Settings_mainAdmin)
+admin.site.register(Aya, AyaAdmin)
 admin.site.register(Hadis, HadisAdmin)
-admin.site.register(About, AboutAdmin)
-admin.site.register(Contact, ContactAdmin)
-admin.site.register(Footer, FooterAdmin)
-admin.site.register(Contact_us, Contact_usAdmin)
+admin.site.register(Messages_contact, Messages_contactAdmin)
+admin.site.register(Contact_footer, Contact_footerAdmin )
 

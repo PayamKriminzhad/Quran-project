@@ -1,0 +1,287 @@
+
+/* ..........Header Area........... */
+.bgHeader {
+  width: 100%;
+  margin-top: -81px;
+}
+
+.QuranImg {
+  width: 80%;
+  height: fit-content;
+  margin: -10% 0 0 15%;
+}
+
+.hero {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  margin-top: 5%;
+}
+
+.ayeHero h1::before {
+  content: "<<";
+  font-family: monospace;
+}
+
+.ayeHero h1::after {
+  content: ">>";
+  font-family: monospace;
+}
+
+.ayeHero {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+}
+
+.ayep {
+  text-align: right;
+  color: #fff;
+  font-weight: bold;
+}
+
+.ayeSpan {
+  text-align: right;
+}
+
+/* ..........Area Ather Header.............. */
+.container {
+  padding: 5%;
+  text-align: right;
+}
+
+.means {
+  opacity: 0.7;
+}
+
+.ayeSpan2 {
+  color: rgb(97, 138, 26);
+  font-size: smaller;
+}
+
+/* ...........Section 2 (Ayat)........... */
+/* .......Background........... */
+.boxSection2 {
+  border-top: 3px solid rgb(97, 138, 26);
+}
+
+.bgSection2 {
+  width: 100%;
+  height: 50vh;
+}
+
+.detail_bgSection2 {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40%;
+}
+
+.detail_bgSection2h3 {
+  color: rgb(97, 138, 26);
+}
+
+.titleBox {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin-top: 13.2%;
+}
+
+.Box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Box span {
+  position: absolute;
+  margin-top: 3%;
+}
+
+.boxSpan1 {
+  color: blueviolet;
+  font-size: large;
+  font-weight: bold;
+}
+
+.boxSpan2 {
+  color: rgb(97, 138, 26);
+  font-size: large;
+  font-weight: bold;
+}
+
+/* ..........Ayat............ */
+.Ayat {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 -10px 20px 0px rgb(97, 138, 26);
+}
+
+.Ayat select {
+  position: relative;
+  border-radius: 5px;
+}
+
+.selectBoxMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+}
+
+#selectBoxMain {
+  border-right: 2px solid black;
+}
+
+.selectBox {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 75%;
+  border-bottom: 1px solid black;
+  padding: 2% 0;
+}
+
+.totalAyat {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.totalAyat p {
+  opacity: 0.7;
+}
+
+.ayatDetails {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  opacity: 0.7;
+  font-size: small;
+  font-weight: bold;
+}
+
+.ayatDetails a {
+  text-decoration: none;
+}
+
+.lineStar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lineStar::after {
+  content: "   ____________________ ";
+  padding-bottom: 20px;
+}
+
+.lineStar::before {
+  content: "   ____________________ ";
+  padding-bottom: 20px;
+}
+
+.imgStar {
+  padding: 0 5px;
+}
+
+/* .........About Us............ */
+.aboutUs {
+  width: 100%;
+  height: auto;
+}
+
+.aboutBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+
+.aboutUs_txt {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: right;
+  width: 40%;
+  margin-top: -15%;
+  z-index: 1;
+}
+
+.borderH1 {
+  padding-bottom: 5px;
+  width: 15%;
+}
+
+.contactUs_Box h1 {
+  border-bottom: 3px solid rgb(97, 138, 26);
+  z-index: 1;
+}
+
+.aboutUs_img {
+  width: 80%;
+  margin-top: -10%;
+}
+
+.aboutUs_img2Box {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 100%;
+}
+
+.aboutUs_img2 {
+  width: 50%;
+  margin-top: 20%;
+}
+
+/* .............Contact Us................ */
+.contactUs_Box {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: right;
+  padding: 4%;
+}
+
+.contactUs_Box p,.aboutUs_txt p {
+  z-index: 1;
+  direction: rtl;
+  text-align: justify;
+}
+
+.aboutUs_txt h1 {
+  border-bottom: 3px solid blueviolet;
+}
+
+.requestBtn {
+  background-color: rgb(66, 97, 11);
+  border: none;
+  border-radius: 5px;
+  width: 25%;
+  padding: 5px;
+  outline: none;
+  z-index: 1;
+}
+
+.requestBtn a {
+  color: #fff;
+  text-decoration: none;
+}

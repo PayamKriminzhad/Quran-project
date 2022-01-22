@@ -1,0 +1,120 @@
+.container {
+  direction: rtl;
+  position: relative;
+  display: flex;
+  margin: 10px 0 0 0;
+  min-height: 67px;
+  justify-content: space-evenly;
+}
+
+/* ........... Logo Css ........... */
+.logoBox {
+  display: flex;
+  width: 20%;
+  margin-left: -300px;
+}
+
+.logoImg {
+  border-radius: 100px;
+  background-color: red;
+  width: 23%;
+}
+
+/* ........... Navigation ........... */
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+}
+
+li {
+  display: flex;
+}
+
+.menu li a:active {
+  border-bottom: 3px solid #fff;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.menu a:hover {
+  transform: scale(0.9);
+}
+
+/* ...........Search Box .............. */
+.searchBox {
+  display: flex;
+  align-items: center;
+}
+
+.search {
+  border: none;
+  border-radius: 0 6px 6px 0;
+  background-color: rgb(173, 159, 187);
+  height: 30px;
+  padding: 5px;
+  opacity: 0.7;
+}
+
+::placeholder{
+  opacity: 1;
+  color: rgb(22, 19, 19);
+  font-size: medium;
+}
+
+.search_logo {
+  background-color: rgb(173, 159, 187);
+  height: 30px;
+  padding: 5px;
+  border-radius: 6px 0 0 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  opacity: 0.7;
+}
+
+.search_logo::before {
+  content: " | ";
+  color: rgb(121 74 167);
+  margin-left: 10px;
+  height: 28px;
+}
+
+.search_logo::after {
+  content: url(../assets/img/Icon-metro-search.svg);
+}
+
+/* ..........Drop Down.......... */
+.dropdown {
+  display: flex;
+  align-items: center;
+  margin-right: 3%;
+  width: 10%;
+  justify-content: space-around;
+}
+
+.lang {
+  border: none;
+  background: none;
+  outline: none;
+  color: #fff;
+  font-weight: 600;
+}
+
+.lang option {
+  color: #000;
+  outline: none;
+}
+
+/* ..........Profile Account.........*/
+
+.profile {
+  border-radius: 100px;
+  background-color: rgb(0, 0, 0);
+  width: 80%;
+}
