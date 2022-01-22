@@ -1,4 +1,5 @@
-from django.shortcuts import render, HttpResponse, redirect, get_object_or_404
+from django.shortcuts import render, HttpResponse, redirect
+from django.http import Http404
 from django.contrib.auth import authenticate, login, get_user_model
 from .models import Hadis, Settings_main, Messages_contact, Aya, Contact_footer
 from .filters import AyaFilter
@@ -71,7 +72,7 @@ def login_page(request):
 def main_page(request):
 
 
-    header = Settings_main.objects.all()
+    header = Settings_main.objects.first()
     hadis = Hadis.objects.all()
     
 
@@ -108,9 +109,14 @@ def main_page(request):
 def details_page(request, ayaid, *args, **kwargs):
 
 
-    aya = Aya.objects.get(id=ayaid)
+    aya = Aya.objects.filter(id=ayaid)
     
-    get_object_or_404(Aya, id=ayaid)
+    if aya.exists() and aya.count()==0:
+        aya=aya.first()
+
+    else:
+        raise Http404("does not exist")    
+
     context = {
         'aya': aya,
     }

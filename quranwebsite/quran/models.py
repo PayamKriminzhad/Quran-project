@@ -1,5 +1,3 @@
-import datetime
-import sqlite3
 from django.db import models
 import django.utils
 
