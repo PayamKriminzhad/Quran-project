@@ -1,14 +1,18 @@
 from django.shortcuts import render, HttpResponse, redirect
 from django.http import Http404
 from django.contrib.auth import authenticate, login, get_user_model
-from .models import Hadis, Settings_main, Messages_contact, Aya, Contact_footer
+from .models import Hadis, Settings_main, Messages_contact, Aya, Messages_footer, Comments_aya
 from .filters import AyaFilter
-from .forms import Form_register, Form_footer, Form_contact
+from .forms import Form_register, Form_footer, Form_contact, Form_login
 from django.contrib import messages
 from django.contrib.auth import authenticate, login
 from django.db.models import F
 import requests
 
+#api
+from django.contrib.auth.models import User, Group
+from rest_framework import viewsets, permissions
+from .serializers import AyaSerializer, Messages_contactSerializer, Messages_footerSerializer, HadisSerializer, Comments_ayaSerializer, UserSerializer
 
 #first page
 
@@ -26,6 +30,8 @@ def first_page(request):
 User = get_user_model()
 
 def register_page(request):
+
+
     if request.method == 'POST':
 
 
@@ -33,13 +39,12 @@ def register_page(request):
 
         if form.is_valid():
             
-            firstName = form.cleaned_data.get('firstName')
-            lastName = form.cleaned_data.get('lastName')
+            fullName = form.cleaned_data.get('fullName')
             userName = form.cleaned_data.get('userName')
             email = form.cleaned_data.get('email')
             password = form.cleaned_data.get('password')
 
-            newUser = User.objects.create_user(username=userName, email=email, password=password, first_name=firstName, last_name=lastName)
+            newUser = User.objects.create_user(username=userName, email=email, password=password, first_name=fullName)
             print(newUser)
 
         
@@ -51,19 +56,34 @@ def register_page(request):
 #login page
 def login_page(request):
     if request.method == 'POST':
-        username, email = request.POST('نام کاربری یا پست الکترونیکی ')
-        password = request.POST['رمز عبور']
 
-        user = authenticate(username=username, email=email, password=password)
+        form = Form_login(request.POST or None)
+
+        userORemail = form.cleaned_data.get('userORemail')
+        password = form.cleaned_data.get('password')
+        
+        
+
+        user = authenticate(username=userORemail, password=password)
 
         if user is not None:
             login(request, user)
-            return render(request, 'login.html', )
 
         else: 
+            
+            user = authenticate(email=userORemail, password=password)
+            if user is not None:
+                login(request, user)
+
+            
             messages.error(request, "نام کاربری یا رمز عبور اشتباه می باشد")
 
-    return render(request,'login.html')
+
+    context = {
+
+    }
+
+    return render(request,'login.html', context)
 
 
 
@@ -72,7 +92,7 @@ def login_page(request):
 def main_page(request):
 
 
-    header = Settings_main.objects.first()
+    settings = Settings_main.objects.first()
     hadis = Hadis.objects.all()
     
 
@@ -83,7 +103,7 @@ def main_page(request):
         name = contact_us.cleaned_data.get("name")
         number = contact_us.cleaned_data.get("number")
         suggestion = contact_us.cleaned_data.get("suggustion")
-        Contact_footer.objects.create(name = name,number = number ,suggestion = suggestion,is_read = False)
+        Messages_footer.objects.create(name = name,number = number ,suggestion = suggestion,is_read = False)
     
 
 
@@ -95,7 +115,7 @@ def main_page(request):
     
     
     context = {
-        'header' : header,
+        'settings' : settings,
         'aya' : aya,
         'hadis' : hadis,
         'ayaFilter': ayaFilter,
@@ -166,3 +186,31 @@ def save_page(request):
 
     return render (request, 'contact.html' , context)
 
+
+
+#aya API
+
+class AyaViewSet(viewsets.ModelViewSet):
+    
+    queryset = Aya.objects.all()
+    serializer_class = AyaSerializer
+class Comments_ayaViewSet(viewsets.ModelViewSet):
+    
+    queryset = Comments_aya.objects.all()
+    serializer_class = Comments_ayaSerializer
+class HadisViewSet(viewsets.ModelViewSet):
+    
+    queryset = Hadis.objects.all()
+    serializer_class = HadisSerializer
+class Messages_contactViewSet(viewsets.ModelViewSet):
+    
+    queryset = Messages_contact.objects.all()
+    serializer_class = Messages_contactSerializer
+class Messages_footerViewSet(viewsets.ModelViewSet):
+    
+    queryset = Messages_footer.objects.all()
+    serializer_class = Messages_footerSerializer
+class UserViewSet(viewsets.ModelViewSet):
+    
+    queryset = User.objects.all()
+    serializer_class = UserSerializer

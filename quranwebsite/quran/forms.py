@@ -9,8 +9,7 @@ from django.contrib.auth.models import User
 class Form_register(forms.Form):
 
     userName = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'username'}))
-    firstName = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'firstname'}))
-    lastName=forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'lastname'}))
+    fullName = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'firstname'}))
     email=forms.EmailField(widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'email'}))
     password=forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'password'}))
     passwordConfirm=forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'passwordConfirm'}))
@@ -24,6 +23,13 @@ class Form_register(forms.Form):
             raise forms.ValidationError('رمز ها یکسان نیستند')
         return data
 
+#login form
+class Form_login(forms.Form):
+    
+    userORemail = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'username'}))
+    password=forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'password'}))
+
+    
 
 #footer contact form
 

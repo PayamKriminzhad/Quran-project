@@ -49,17 +49,19 @@ class Settings_main(models.Model):
     #body
 class Aya(models.Model):
     # main page
-    idno = models.IntegerField(default=0)
     joz = models.CharField(max_length=50, verbose_name="جز")
     sura = models.CharField(max_length=50, verbose_name="سوره")
     ayaNumber = models.CharField(max_length=50, verbose_name="آیه")
     text = models.TextField(max_length=1500, verbose_name="متن")
     translation = models.TextField(max_length=1500, verbose_name="ترجمه")
+    language1 = models.TextField(max_length=1500, verbose_name="ترجمه", null=True)
+    language2 = models.TextField(max_length=1500, verbose_name="ترجمه", null=True)
+    language3 = models.TextField(max_length=1500, verbose_name="ترجمه", null=True)
+    language4 = models.TextField(max_length=1500, verbose_name="ترجمه", null=True)
     location = models.CharField(max_length=50, verbose_name="مکان نزول", null=True)
     # detail page
     tafsir = models.TextField(max_length=1500, verbose_name="تفسیر", null=True)
     relatedAya = models.CharField(max_length=150, verbose_name="آیات مرتبط", null=True)
-    point = models.CharField(max_length=50, verbose_name="هدف آیه", null=True)
     count = models.IntegerField(default=0)
     class Meta:
         verbose_name = "آیه ها"
@@ -98,7 +100,7 @@ class Messages_contact(models.Model):
 #footer 
 
 
-class Contact_footer(models.Model):
+class Messages_footer(models.Model):
     name = models.CharField(max_length=50, verbose_name="نام")
     number = models.IntegerField(verbose_name="شماره تلفن")
     suggestion = models.TextField(max_length=2500, verbose_name="نظر و انتقادات")
