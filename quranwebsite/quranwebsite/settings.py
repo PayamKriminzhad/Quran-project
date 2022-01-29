@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'quran',
     'django_filters',
     'rest_framework',
+    'corsheaders',
 ]
 
 X_FRAME_OPTIONS='SAMEORIGIN' # only if django version >= 3.0
@@ -56,6 +57,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'quranwebsite.urls'
@@ -142,3 +144,10 @@ STATICFILS_DIRS=[
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+
+
+#react
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:3000',
+]

@@ -1,0 +1,47 @@
+.container img {
+    width: 100%;
+    display: flex;
+}
+
+.container map {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+
+}
+
+.iranArea {
+    display: flex;
+    position: absolute;
+    margin: 0 0 57% 28%;
+    align-items: center;
+    justify-content: center;
+    width: 7%;
+    height: 125px;
+}
+
+.iranArea:hover {
+    background: url(../assets/img/IranArea.svg);
+    background-repeat: no-repeat;
+    transform: scale(1.5);
+    transition: 1s;
+}
+
+.soudiArea {
+    display: flex;
+    position: absolute;
+    margin: 0 0 45% 18%;
+    align-items: center;
+    justify-content: center;
+    width: 5%;
+    height: 72px;
+}
+
+.soudiArea:hover {
+    background: url(../assets/img/SoudiArea.svg);
+    background-repeat: no-repeat;
+    transform: scale(1.5);
+    transition: 1s;
+}

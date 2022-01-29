@@ -1,0 +1,203 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* .........Backgroung Image.............. */
+.bgImg {
+  width: 100%;
+  height: 50vh;
+  position: absolute;
+}
+/* ..........Participation............ */
+.firstRow {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.firstRow h2 {
+  font-size: large;
+}
+
+.participation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.participationBtn {
+  background-color: indigo;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 5px;
+  display: flex;
+  width: 45%;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 5vh;
+  font-size: medium;
+}
+
+.participationBtn:hover {
+  opacity: 0.8;
+}
+
+/* ..........Menu............. */
+
+.footerMenu {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.footerMenu h2 {
+  display: flex;
+  border-bottom: 4px solid #fff;
+  border-radius: 3px;
+  padding-bottom: 5px;
+}
+
+.footerMenu a {
+  text-decoration: none;
+  color: #000;
+}
+
+.footerMenu a:hover {
+  transform: scale(0.9);
+  opacity: 0.9;
+  color: #000;
+}
+
+/* ...........Forms............ */
+
+.form {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: flex-end;
+  width: 100%;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 0 8px 0 0;
+  margin-bottom: 8px;
+  border: none;
+  border-radius: 5px;
+  resize: none;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  text-align: right;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.form input:focus,
+.form textarea:focus {
+  text-align: right;
+}
+
+.form textarea {
+  height: 80px;
+  padding-top: 5px;
+}
+
+.form input {
+  height: 35px;
+}
+
+.form button {
+  width: 100%;
+  height: 35px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: indigo;
+  color: #fff;
+  font-size: medium;
+}
+
+.form button:hover {
+  opacity: 0.8;
+}
+
+/* ...............Logo & Social Icons............ */
+.socialBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  z-index: 1;
+  height: 40vh;
+}
+
+.socialBox img {
+  width: 75px;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 150px;
+}
+
+.social li {
+  transform: scale(1.3);
+}
+
+.social a {
+  color: #fff;
+}
+
+.social a:hover{
+  transform: scale(1.2);
+  color: #fff;
+}
+/* ............Copyright................ */
+
+.copyRight {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+/* ................Go Up Button.............. */
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 6px;
+  right: 14px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}

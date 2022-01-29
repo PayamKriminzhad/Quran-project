@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: IRANSansWebFaNum;
+}
+
+@font-face {
+  font-family: "Iranian-Sans";
+  src: local("Iranian-Sans"), url(./Fonts/Iranian-Sans.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "IRANSansWebFaNum";
+  src: local("IRANSansWebFaNum"),
+    url(./Fonts/IRANSansWebFaNum.ttf) format("truetype");
+}
+
+input,
+button,
+textarea,
+select {
+  outline: none;
+  font-family: "IRANSansWebFaNum";
+}

@@ -1,0 +1,131 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 5% auto;
+  box-shadow: 0 0 7px 0;
+  border: none;
+  border-radius: 15px;
+  width: 50%;
+  gap: 20px;
+  padding: 50px;
+}
+
+.container h1 {
+  font-size: medium;
+}
+
+/* .......closeItem.......... */
+.closeItem {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: auto;
+}
+
+.closeItem:hover {
+  transform: scale(1.2);
+}
+
+/* ...........Form......... */
+.formBox {
+  display: flex;
+  direction: rtl;
+  align-items: flex-start;
+  width: 80%;
+  justify-content: space-between;
+}
+
+.totalBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+  gap: 35px;
+}
+
+.inptBox {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  gap: 5px;
+}
+
+.telInpt::before {
+  content: "+98";
+  color: black;
+  background-color: rgb(175 175 175);
+  border-radius: 5px 0 0 5px;
+  padding: 5px;
+}
+
+.tels {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  direction: ltr;
+}
+
+.tels input[type="tel"] {
+  border: none;
+  padding: 5px 5px;
+  outline: none;
+  box-shadow: 0 0 1px 1px #c7c7c7;
+  display: flex;
+  border-radius: 0 5px 5px 0;
+  width: 100%;
+}
+
+.inptBox input[type="text"],
+.inptBox input[type="email"],
+.inptBox input[type="password"] {
+  border: none;
+  border-radius: 5px;
+  padding: 6px 5px;
+  outline: none;
+  box-shadow: 0 0 1px 1px #c7c7c7;
+}
+
+.inptBox textarea {
+  border: none;
+  border-radius: 5px;
+  padding: 6px 5px;
+  outline: none;
+  box-shadow: 0 0 1px 1px #c7c7c7;
+  resize: none;
+  height: 14vh;
+}
+
+.submitBtn {
+  border: none;
+  background-color: green;
+  border-radius: 5px;
+  outline: none;
+  color: #fff;
+  padding: 8px 0;
+  width: 40%;
+  margin-top: 8%;
+}
+
+.submitBtn:hover {
+  background-color: rgb(2, 94, 2);
+}
+
+/* ..........Social........... */
+
+.social {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  gap: 10px;
+  transform: scale(1.2);
+}
+
+.social a {
+  color: #000;
+}
+
+.social a:hover {
+  transform: scale(0.9);
+}

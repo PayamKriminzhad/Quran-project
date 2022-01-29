@@ -1,0 +1,185 @@
+.container {
+  direction: rtl;
+  text-align: justify;
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 1px rgb(177, 177, 177);
+  margin: 5% auto;
+  padding: 3% 1%;
+}
+.container h1:first-child {
+  font-size: larger;
+}
+/* .......................... */
+.formsBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  box-shadow: 0 0 4px 0px #aeaeae;
+  width: 80%;
+  border-radius: 10px;
+  background-color: rgb(245 245 245);
+  padding: 25px;
+  margin: 10px auto;
+}
+
+.formsBox h2 {
+  font-size: large;
+}
+
+/* ..........First Form(Specifications)............. */
+
+.Specifications {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 50%;
+}
+
+.Specifications input[type="text"],
+.Specifications input[type="email"] {
+  border: none;
+  border-radius: 5px;
+  padding: 6px 5px;
+  outline: none;
+  box-shadow: 0 0 1px 1px #c7c7c7;
+}
+
+.telBox input[type="tel"] {
+  border: none;
+  padding: 5px 5px;
+  outline: none;
+  box-shadow: 0 0 1px 1px #c7c7c7;
+  direction: ltr;
+  display: flex;
+  border-radius: 0 5px 5px 0;
+}
+
+.checkBox input[type="checkbox"] {
+  accent-color: green;
+  transform: scale(1.5);
+}
+
+.telBox {
+  display: flex;
+  align-items: center;
+}
+
+.telInput {
+  direction: ltr;
+  box-shadow: 0 0 1px 1px #c7c7c7;
+}
+
+.telInput::before {
+  content: "+98";
+  color: black;
+  z-index: 1;
+  background-color: rgb(175 175 175);
+  border-radius: 5px 0 0 5px;
+  padding: 6px;
+}
+
+.checkBox {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+.checkBox label {
+  font-size: smaller;
+  font-weight: 500;
+}
+
+/* ...................Secend Form (Pay).............. */
+.paymentMethod {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radioBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.radioBox label {
+  font-size: small;
+  font-weight: 500;
+}
+
+.Shaparak {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 125px;
+  justify-content: flex-end;
+}
+
+.Bitcoin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 125px;
+  justify-content: flex-end;
+  gap: 35px;
+}
+
+.Amount {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.paymentWay {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.method h2 {
+  font-size: small;
+}
+
+.arzedigitalShow {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.bitcoin23 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inpt1,
+.inpt2 {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.inpt1 input,
+.inpt2 input {
+  width: 80%;
+}
+
+.paymentBtn {
+  border: none;
+  border-radius: 5px;
+  background-color: green;
+  outline: none;
+  color: #fff;
+  padding: 8px 0;
+}
+
+.paymentBtn:hover {
+  background-color: rgb(0, 92, 0);
+}

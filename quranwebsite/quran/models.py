@@ -54,14 +54,14 @@ class Aya(models.Model):
     ayaNumber = models.CharField(max_length=50, verbose_name="آیه")
     text = models.TextField(max_length=1500, verbose_name="متن")
     translation = models.TextField(max_length=1500, verbose_name="ترجمه")
-    language1 = models.TextField(max_length=1500, verbose_name="ترجمه", null=True)
-    language2 = models.TextField(max_length=1500, verbose_name="ترجمه", null=True)
-    language3 = models.TextField(max_length=1500, verbose_name="ترجمه", null=True)
-    language4 = models.TextField(max_length=1500, verbose_name="ترجمه", null=True)
-    location = models.CharField(max_length=50, verbose_name="مکان نزول", null=True)
+    language1 = models.TextField(max_length=1500, verbose_name="ترجمه", null=True, blank=True)
+    language2 = models.TextField(max_length=1500, verbose_name="ترجمه", null=True, blank=True)
+    language3 = models.TextField(max_length=1500, verbose_name="ترجمه", null=True, blank=True)
+    language4 = models.TextField(max_length=1500, verbose_name="ترجمه", null=True, blank=True)
+    location = models.CharField(max_length=50, verbose_name="مکان نزول", null=True, blank=True)
     # detail page
-    tafsir = models.TextField(max_length=1500, verbose_name="تفسیر", null=True)
-    relatedAya = models.CharField(max_length=150, verbose_name="آیات مرتبط", null=True)
+    tafsir = models.TextField(max_length=1500, verbose_name="تفسیر", null=True, blank=True)
+    relatedAya = models.CharField(max_length=150, verbose_name="آیات مرتبط", null=True, blank=True)
     count = models.IntegerField(default=0)
     class Meta:
         verbose_name = "آیه ها"

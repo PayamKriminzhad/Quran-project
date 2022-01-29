@@ -1,0 +1,86 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 5% auto;
+  box-shadow: 0 0 7px 0;
+  border: none;
+  border-radius: 15px;
+  width: 60%;
+  gap: 40px;
+}
+
+/* ..............Form.......... */
+.formBox {
+  direction: rtl;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 5px;
+  width: 70%;
+}
+
+.formBox input[type="text"],
+.formBox input[type="email"],
+.formBox input[type="password"] {
+  border: none;
+  border-radius: 5px;
+  padding: 6px 5px;
+  outline: none;
+  box-shadow: 0 0 1px 1px #c7c7c7;
+}
+
+.formBox input[type="tel"] {
+  border: none;
+  padding: 5px 5px;
+  outline: none;
+  box-shadow: 0 0 1px 1px #c7c7c7;
+  display: flex;
+  border-radius: 0 5px 5px 0;
+  width: 100%;
+}
+
+.details_Input {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  gap: 15px;
+}
+
+.telInput {
+  direction: ltr;
+  display: flex;
+}
+
+.telInput::before {
+  content: "+98";
+  color: black;
+  background-color: rgb(175 175 175);
+  border-radius: 5px 0 0 5px;
+  padding: 6px;
+}
+
+.pass {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.submitBtn {
+    border: none;
+    background-color: rgb(68, 0, 255);
+    border-radius: 5px;
+    outline: none;
+    color: #fff;
+    padding: 8px 0;
+    width: 40%;
+}
+
+.submitBtn:hover {
+    background-color: rgb(12, 4, 121);
+}
+
+.container p {
+    font-size: small;
+}
